@@ -6,8 +6,9 @@
 #define USE_MQTT_TLS
 #define USE_MQTT_TLS_CA_CERT
 #endif
-#ifndef USE_MQTT_AWS_IOT_LIGHT
-#define USE_MQTT_AWS_IOT_LIGHT
+#define USE_4K_RSA
+#ifndef USE_MQTT_AWS_IOT
+#define USE_MQTT_AWS_IOT
 #endif
 #ifdef USE_DISCOVERY
 #undef USE_DISCOVERY
