@@ -1,0 +1,104 @@
+#ifndef _USER_CONFIG_OVERRIDE_H_
+#define _USER_CONFIG_OVERRIDE_H_
+
+// ===== AWS IoT Core =====
+#ifndef USE_MQTT_TLS
+#define USE_MQTT_TLS
+#define USE_MQTT_TLS_CA_CERT
+#endif
+#ifndef USE_MQTT_AWS_IOT_LIGHT
+#define USE_MQTT_AWS_IOT_LIGHT
+#endif
+#ifdef USE_DISCOVERY
+#undef USE_DISCOVERY
+#endif
+
+// ===== REMOVE features pesadas =====
+#undef USE_DOMOTICZ
+#undef USE_HOME_ASSISTANT
+#undef USE_KNX
+#undef USE_KNX_WEB_MENU
+#undef USE_TELEGRAM
+#undef USE_MATTER_DEVICE
+#undef USE_BERRY
+#undef USE_SCRIPT
+#undef USE_RULES
+#undef USE_DEEPSLEEP
+#undef USE_TIMERS
+#undef USE_TIMERS_WEB
+#undef USE_SUNRISE
+#undef USE_SHUTTER
+#undef USE_PWM_DIMMER
+#undef USE_LIGHT
+#undef USE_WS2812
+#undef USE_TUYA_MCU
+#undef USE_ARMTRONIX_DIMMERS
+#undef USE_PS_16_DZ
+#undef USE_ZIGBEE
+#undef USE_IR_REMOTE
+#undef USE_RF_FLASH
+#undef USE_RC_SWITCH
+#undef USE_ENERGY_SENSOR
+#undef USE_ENERGY_MARGIN_DETECTION
+#undef USE_PZEM004T
+#undef USE_PZEM_AC
+#undef USE_PZEM_DC
+#undef USE_EMULATION
+#undef USE_EMULATION_HUE
+#undef USE_EMULATION_WEMO
+
+// ===== REMOVE todos os sensores =====
+#undef USE_COUNTER
+#undef USE_ADC
+#undef USE_DS18x20
+#undef USE_DHT
+#undef USE_SHT
+#undef USE_HTU
+#undef USE_BMP
+#undef USE_BME680
+#undef USE_BH1750
+#undef USE_VEML6070
+#undef USE_ADS1115
+#undef USE_INA219
+#undef USE_SHT3X
+#undef USE_MHZ19
+#undef USE_SENSEAIR
+#undef USE_PMS5003
+#undef USE_NOVA_SDS
+#undef USE_SGP30
+#undef USE_SR04
+#undef USE_LM75AD
+#undef USE_CCS811
+#undef USE_HX711
+#undef USE_MAX31855
+#undef USE_PN532_HSU
+#undef USE_SCD30
+#undef USE_VL53L0X
+#undef USE_MLX90614
+#undef USE_AHT1x
+#undef USE_AHT2x
+#undef USE_DHT12
+#undef USE_DS1624
+#undef USE_AS3935
+#undef USE_LD2410
+#undef USE_HM10
+#undef USE_HRXL
+#undef USE_BLE_ESP32
+#undef USE_MI_ESP32
+// ===== Force-disable Berry dependencies =====
+#undef USE_AUTOCONF
+#undef USE_EXTENSION_MANAGER
+#undef USE_MATTER_DEVICE
+#undef USE_BERRY
+#undef USE_BERRY_CRYPTO_EC_P256
+#undef USE_BERRY_CRYPTO_HMAC_SHA256
+#undef USE_BERRY_CRYPTO_HKDF_SHA256
+#undef USE_BERRY_CRYPTO_AES_CCM
+#undef USE_BERRY_CRYPTO_AES_CTR
+#undef USE_BERRY_CRYPTO_AES_GCM
+#undef USE_BERRY_CRYPTO_SHA256
+#undef USE_BERRY_CRYPTO_PBKDF2_HMAC_SHA256
+#undef USE_BERRY_CRYPTO_SPAKE2P_MATTER
+#undef USE_BERRY_TCPSERVER
+#undef USE_BERRY_PSRAM
+#endif  // _USER_CONFIG_OVERRIDE_H_
